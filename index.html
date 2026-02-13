@@ -121,30 +121,12 @@ Ti prometto che continuerò a meritarmi il tuo amore, a costruire il nostro futu
 Buon San Valentino, amore mio.
 Ti amo più di quanto riesca a scrivere</p
                                         
-    <!-- CONTENITORE CUORICINI -->
-    <div id="hearts"></div>
-
-    <script>
-      function createHeart() {
-         const heart = document.createElement("div");
-         heart.classList.add("heart");
-         heart.innerHTML = "❤️";
-         heart.style.left = Math.random() * 100 + "vw";
-         document.getElementById("hearts").appendChild(heart);
-         setTimeout(() => heart.remove(), 4000);
-        }
+    <!-- GIF --> 
+        <img src="https://i.pinimg.com/originals/4f/9b/13/4f9b134ff93b393521e87f9c154edeee.gif"
+        style="width: 250px; margin-top: 20px; border-radius: 12px;"> 
+      </div>
       
-       function openLetter() { 
-         const container = document.getElementById("letter-container");
-         container.classList.remove("letter-hidden"); 
-         container.classList.add("letter-show"); 
-
-         // CUORICINI ANIMATI
-          for (let i = 0; i < 20; i++) {
-            setTimeout(createHeart, i * 150);
-          }
-         }
-      </script>
-        
-</body>
-</html>
+      </script> 
+  
+  </body> 
+  </html>
