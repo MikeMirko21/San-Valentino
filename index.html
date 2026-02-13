@@ -1,56 +1,127 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
+<!DOCTYPE html> 
+<html lang="it"> 
+<head> 
   <meta charset="UTF-8">
-  <title>Buon San Valentino ❤️</title>
-  <style>
-    body {
+  <title>Buon San Valentino piccolina mia ❤️</title> 
+  <style> 
+    body { 
       font-family: 'Helvetica', sans-serif;
       background: #ffe6ec;
       color: #333;
       text-align: center;
       padding: 40px;
-    }
-    h1 { font-size: 3rem; color: #d6336c; }
-    .card {
+    } 
+    
+    h1 { 
+      font-size: 3rem;
+      color: #d6336c;
+    } 
+    
+    .card { 
       background: white;
       padding: 20px;
       margin: 20px auto;
       border-radius: 12px;
       max-width: 600px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    button {
+    } 
+    
+    /* BOTTONE BELLO */ 
+    .open-letter { 
       background: #d6336c;
       color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1rem;
-    }
+      padding: 14px 24px;
+      border: none; 
+      border-radius: 30px;
+      cursor: pointer; 
+      font-size: 1.2rem; 
+      transition: 0.3s; 
+      margin-top: 20px; 
+    } 
+    
+    .open-letter:hover { 
+      background: #b82a59;
+      transform: scale(1.05);
+    } 
+    
+    /* CONTENITORE LETTERA */ 
+    #letter-container { 
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    } 
+    
+    /* Stato nascosto */ 
+    .letter-hidden { 
+      opacity: 0;
+      transform: scale(0.8);
+      transition: 0.4s ease;
+      pointer-events: none;
+    } 
+    
+    /* Stato visibile */ 
+    .letter-show { 
+      opacity: 1;
+      transform: scale(1);
+      pointer-events: auto;
+    } 
+    
+    /* Stile della lettera */ 
+    .letter { 
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      max-width: 400px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      animation: openLetter 0.6s ease forwards; 
+      text-align: center;
+    } 
+    /* Animazione apertura */
+    @keyframes openLetter { 
+      0% { transform: translateY(20px) scale(0.8); opacity: 0; }
+      100% { transform: translateY(0) scale(1); opacity: 1; }
+    } 
   </style>
-</head>
-<body>
+</head> 
+  
+  <body> 
+    
+    <h1>Buon San Valentino ❤️</h1>
+    <p>Ti amo da morire piccola mia.</p>
+    
+    <div class="card"> 
+      <h2>TI AMO TANTISSSSSSSSSSSSIMO</h2>
+      <ul style="text-align:left;">
+        <li>Perché rendi ogni giorno più bello.</li>
+        <li>Perché sai farmi sorridere sempre.</li> 
+        <li>Perché con te mi sento a casa.</li>
+      </ul> 
+    </div> 
+    
+    <div class="card">
+      <h2>La nostra storia</h2>
+      <p>Dal primo giorno in cui ti ho incontrata/o, tutto è cambiato.</p>
+    </div> 
+    
+    <!-- BOTTONE --> 
+    <button class="open-letter" onclick="openLetter()">Apri il tuo regalo ❤️</button>
+    
+    <!-- LETTERA NASCOSTA --> 
+    <div id="letter-container" class="letter-hidden">
+      <div class="letter"> 
+        <h2>TI AMO ❤️</h2>
+        <p>Con tutto il mio cuore, per sempre.</p>
+      </div> 
+    </div> 
+    
+    <!-- SCRIPT --> 
+    <script>
+      function openLetter() { 
+        document.getElementById("letter-container").classList.remove("letter-hidden"); 
+        document.getElementById("letter-container").classList.add("letter-show"); 
+      } 
+    </script> 
+  
+  </body> 
+  </html>
 
-  <h1>Buon San Valentino ❤️</h1>
-  <p>Ti amo da morire piccola mi.</p>
-
-  <div class="card">
-    <h2>Perché ti amo</h2>
-    <ul style="text-align:left;">
-      <li>Perché rendi ogni giorno più bello.</li>
-      <li>Perché sai farmi sorridere sempre.</li>
-      <li>Perché con te mi sento a casa.</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>La nostra storia</h2>
-    <p>Dal primo giorno in cui ti ho incontrata/o, tutto è cambiato.</p>
-  </div>
-
-  <button onclick="alert('Ti amo ❤️')">Apri il regalo</button>
-
-</body>
-</html>
