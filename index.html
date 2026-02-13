@@ -105,6 +105,14 @@
     
     <!-- BOTTONE --> 
     <button class="open-letter" onclick="openLetter()">Apri il tuo regalo ❤️</button>
+
+    <script> 
+      function openLetter() { 
+        const container = document.getElementById("letter-container");
+        container.classList.remove("letter-hidden");
+        container.classList.add("letter-show");
+      } 
+    </script>
     
     <!-- LETTERA NASCOSTA --> 
     <div id="letter-container" class="letter-hidden">
@@ -119,14 +127,13 @@ Grazie per la pazienza, per la dolcezza, per la forza che non ostenti ma che si 
 Ti prometto che continuerò a meritarmi il tuo amore, a costruire il nostro futuro, a sorprenderti e a starti vicino in tutto ciò che succederà in futuro.
 
 Buon San Valentino, amore mio.
-Ti amo più di quanto riesca a scrivere</p
+Ti amo più di quanto riesca a scrivere</p>
                                         
     <!-- GIF --> 
         <img src="https://i.pinimg.com/originals/4f/9b/13/4f9b134ff93b393521e87f9c154edeee.gif"
         style="width: 250px; margin-top: 20px; border-radius: 12px;"> 
+        
       </div>
       
-      </script> 
-  
   </body> 
   </html>
